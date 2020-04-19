@@ -160,4 +160,5 @@ def adventure_game():
         print_sleep("Name too short. Please try again.")
         adventure_game()
 
+
 adventure_game()
