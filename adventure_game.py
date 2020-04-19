@@ -149,9 +149,15 @@ def play_again():
 
 def adventure_game():
     name = input("What is your name?\n")
-    print_sleep(f"Welcome to Bambilici, {name}!")
-    intro()
-    first_decision()
-
+    if len(name) >= 2:
+        print_sleep(f"Welcome to Bambilici, {name}!")
+        intro()
+        first_decision()
+    elif len(name) == 0:
+        print_sleep("Please enter name.")
+        adventure_game()
+    else:
+        print_sleep("Name too short. Please try again.")
+        adventure_game()
 
 adventure_game()
